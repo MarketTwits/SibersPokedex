@@ -1,4 +1,4 @@
-package com.markettwits.sportsauce.app.browser
+package com.markettwits.siberspokedex.app.browser
 
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import com.arkivanov.essenty.lifecycle.resume

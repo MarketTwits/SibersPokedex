@@ -1,25 +1,17 @@
 package com.markettwits.siberspokedex.items.api
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.router.webhistory.WebNavigation
-import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.arkivanov.mvikotlin.extensions.coroutines.labels
 import com.arkivanov.mvikotlin.extensions.coroutines.stateFlow
 import com.markettwits.core.decompose.componentScope
 import com.markettwits.siberspokedex.cloud.cloud.model.Pokemon
 import com.markettwits.siberspokedex.items.store.PokemonItemsStore
 import com.markettwits.siberspokedex.items.store.PokemonItemsStoreFactory
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.emptyFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.*
 
 class PokemonItemsComponentImpl(
     componentContext: ComponentContext,
-    private val dependencies: PokemonItemsDependencies,
+    dependencies: PokemonItemsDependencies,
     private val onClickPokemon: (Pokemon) -> Unit,
 ) : PokemonItemsComponent, ComponentContext by componentContext {
     private val store: PokemonItemsStore = PokemonItemsStoreFactory(

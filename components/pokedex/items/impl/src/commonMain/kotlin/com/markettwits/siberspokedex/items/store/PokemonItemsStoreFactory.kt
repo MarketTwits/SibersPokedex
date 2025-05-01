@@ -5,7 +5,6 @@ import com.arkivanov.mvikotlin.core.store.Store
 import com.arkivanov.mvikotlin.core.store.StoreFactory
 import com.markettwits.siberspokedex.cloud.cloud.api.PokedexApi
 import com.markettwits.siberspokedex.items.api.PokemonItemsFilter
-import com.markettwits.siberspokedex.items.api.PokemonItemsState
 import com.markettwits.siberspokedex.items.store.PokemonItemsStore.*
 import kotlinx.coroutines.flow.emptyFlow
 
