@@ -58,7 +58,7 @@ internal fun PokemonItemCard(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(10.dp)
+            .padding(4.dp)
             .scale(if (isHighlighted) scale else 1f)
             .clip(RoundedCornerShape(16.dp))
             .background(backgroundColor)
@@ -75,15 +75,15 @@ internal fun PokemonItemCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .width(130.dp)
+                .width(145.dp)
                 .height(260.dp)
-                .padding(12.dp),
+                .padding(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .weight(0.7f)
+                    .weight(0.8f)
                     .clip(RoundedCornerShape(12.dp))
             ) {
                 AsyncImage(
@@ -95,7 +95,8 @@ internal fun PokemonItemCard(
             }
 
             Column(
-                modifier = Modifier.weight(0.5f)
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = pokemon.name.replaceFirstChar { it.uppercase() },
@@ -120,7 +121,7 @@ internal fun PokemonItemCard(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.Start
                     ) {
-                        StatBar(
+                        PokemonStatBar(
                             name = "HP",
                             value = it.getStatByName("hp"),
                             maxValue = 150,
@@ -130,7 +131,7 @@ internal fun PokemonItemCard(
 
                         Spacer(modifier = Modifier.width(8.dp))
 
-                        StatBar(
+                        PokemonStatBar(
                             name = "ATK",
                             value = it.getStatByName("attack"),
                             maxValue = 150,
@@ -140,7 +141,7 @@ internal fun PokemonItemCard(
 
                         Spacer(modifier = Modifier.width(8.dp))
 
-                        StatBar(
+                        PokemonStatBar(
                             name = "DEF",
                             value = it.getStatByName("defense"),
                             maxValue = 150,

@@ -30,6 +30,7 @@ class SibersPokedexRootComponentImpl(
             source = stackNavigation,
             serializer = SibersPokedexRootComponent.Config.serializer(),
             initialStack = { getInitialStack(deepLinkUrl) },
+            handleBackButton = true,
             childFactory = ::child,
         )
 
