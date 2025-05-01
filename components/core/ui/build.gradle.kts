@@ -32,7 +32,6 @@ kotlin {
             api(libs.coil.compose)
             api(libs.coil.network)
             api(libs.coil.mp)
-            api(libs.richeditor)
             api(libs.composeMaterial3WindowSize)
             api(libs.composeMaterial3Adaptive)
             implementation(compose.components.resources)

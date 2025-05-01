@@ -1,3 +1,8 @@
+![kotlin-version](https://img.shields.io/badge/kotlin-2.1.20-blue?logo=kotlin)
+
+![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
+![badge-desktop](http://img.shields.io/badge/platform-desktop-DB413D.svg?style=flat)
+![badge-js](http://img.shields.io/badge/platform-web-FDD835.svg?style=flat)
 # SibersPokedex
 
 Pokedex is kotlin multiplatform project with 99% shared code, built with Compose multiplatform, Coroutines, Flow, Decompose, MVIKotlin, Koin, Ktor, SqlDelight, and Material 3 based on MVI architecture
