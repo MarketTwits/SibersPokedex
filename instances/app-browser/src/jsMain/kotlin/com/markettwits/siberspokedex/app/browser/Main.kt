@@ -1,4 +1,4 @@
-package com.markettwits.sportsauce.app.browser
+package com.markettwits.siberspokedex.app.browser
 
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport

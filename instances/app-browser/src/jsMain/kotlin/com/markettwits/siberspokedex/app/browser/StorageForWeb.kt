@@ -1,4 +1,4 @@
-package com.markettwits.sportsauce.app.browser
+package com.markettwits.siberspokedex.app.browser
 
 import com.markettwits.cahce.InStorageCacheDirectory
 import com.markettwits.cahce.InStorageFileDirectory
