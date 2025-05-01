@@ -1,0 +1,21 @@
+*.iml
+.gradle
+.flett
+/build
+/captures
+.externalNativeBuild
+.cxx
+.kotlin
+/kotlin-js-store
+local.properties
+
+# Project exclude paths
+/build-logic/build/
+/build-logic/build/classes/kotlin/main/
+
+**/build/
+# IDEA/Android Studio Ignore exceptions
+# Project icon
+.DS_Store
+/.idea/
+!/.idea/icon.png
