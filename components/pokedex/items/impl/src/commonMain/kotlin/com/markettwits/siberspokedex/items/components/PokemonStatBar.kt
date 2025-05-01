@@ -17,9 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.markettwits.core_ui.items.theme.FontNunito
 
 @Composable
-fun StatBar(
+fun PokemonStatBar(
     name: String,
     value: Int,
     maxValue: Int,
@@ -35,13 +37,17 @@ fun StatBar(
         ) {
             Text(
                 text = name,
+                fontFamily = FontNunito.medium(),
+                fontSize = 12.sp,
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                color = MaterialTheme.colorScheme.outline
             )
             Text(
                 text = value.toString(),
+                fontFamily = FontNunito.medium(),
+                fontSize = 12.sp,
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                color = MaterialTheme.colorScheme.outline
             )
         }
         
