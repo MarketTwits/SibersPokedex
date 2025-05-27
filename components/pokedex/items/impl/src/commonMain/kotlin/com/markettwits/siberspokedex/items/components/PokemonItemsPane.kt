@@ -22,7 +22,7 @@ fun PokemonItemsPane(
     val items = state.items.collectAsLazyPagingItems()
 
     CollapsingToolbarRefreshScaffold(
-        modifier = modifier.background(MaterialTheme.colorScheme.outlineVariant),
+       modifier = modifier.background(MaterialTheme.colorScheme.outlineVariant),
         isRefreshing = false,
         onRefresh = items::refresh,
         toolbar = {
