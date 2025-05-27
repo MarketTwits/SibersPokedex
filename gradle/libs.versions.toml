@@ -3,9 +3,10 @@
 
 versionName = "1.0.1"
 jvm = "11"
-kotlin = "2.1.20"
-gradle = "8.9.2" # https://developer.android.com/studio/releases#android_gradle_plugin_and_android_studio_compatibility
-compose = "1.8.0-rc01" # https://github.com/JetBrains/compose-multiplatform
+kotlin = "2.1.21"
+gradle = "8.9.3" # https://developer.android.com/studio/releases#android_gradle_plugin_and_android_studio_compatibility
+compose = "1.8.0" # https://github.com/JetBrains/compose-multiplatform
+composeHotReload = "1.0.0-alpha09" # https://github.com/JetBrains/compose-hot-reload
 kotlinx-serialization = "1.8.0" # https://github.com/Kotlin/kotlinx.serialization
 kotlinx-coroutines = "1.10.2" # https://github.com/Kotlin/kotlinx.coroutines
 kstore = "0.9.1" # https://github.com/xxfast/KStore
@@ -23,7 +24,6 @@ appcompat = "1.7.0" # https://developer.android.com/jetpack/androidx/releases/ap
 decompose = "3.3.0" # https://github.com/arkivanov/Decompose
 reaktive = "2.2.0" # https://github.com/badoo/Reaktive
 mvikotlin = "4.3.0" # https://github.com/arkivanov/MVIKotlin
-tracer = "0.2.15" # https://apptracer.ru/
 
 [libraries]
 
@@ -76,7 +76,7 @@ decompose-android = { module = "com.arkivanov.decompose:extensions-android", ver
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 
-#Tracer
+#Pagin3
 paging-common = { module = "app.cash.paging:paging-common", version.ref = "pagingCommon" }
 paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "pagingCommon" }
 reaktive = { module = "com.badoo.reaktive:reaktive", version.ref = "reaktive" }
@@ -85,20 +85,21 @@ reaktive = { module = "com.badoo.reaktive:reaktive", version.ref = "reaktive" }
 kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
 
 #Gradle Plugins
-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-org-jetbrains-kotlin-multiplatform-gradle-plugin = { module = "org.jetbrains.kotlin.multiplatform:org.jetbrains.kotlin.multiplatform.gradle.plugin", version.ref = "kotlin" }
-org-jetbrains-kotlin-plugin-compose-gradle-plugin = { module = "org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin", version.ref = "kotlin" }
-org-jetbrains-compose-gradle-plugin = { module = "org.jetbrains.compose:org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-multiplatform-gradle-plugin = { module = "org.jetbrains.kotlin.multiplatform:org.jetbrains.kotlin.multiplatform.gradle.plugin", version.ref = "kotlin" }
+kotlin-plugin-compose-gradle-plugin = { module = "org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin", version.ref = "kotlin" }
+compose-gradle-plugin = { module = "org.jetbrains.compose:org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
+compose-hotreload-gradle-plugin = {module = "org.jetbrains.compose.hot-reload:org.jetbrains.compose.hot-reload.gradle.plugin", version.ref = "composeHotReload"}
 
 [plugins]
-
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "gradle" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kmp = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-kmp-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
 
 #Convention Plugins
 kotlin-kmp-convention = { id = "kotlin.multiplatform.convention", version = "unspecified" }

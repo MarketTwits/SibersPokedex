@@ -19,6 +19,11 @@ dependencyResolutionManagement {
     }
 }
 
+plugins {
+    //https://github.com/JetBrains/compose-hot-reload?tab=readme-ov-file#set-up-automatic-provisioning-of-the-jetbrains-runtime-jbr-via-gradle
+    id("org.gradle.toolchains.foojay-resolver-convention").version("0.10.0")
+}
+
 rootProject.name = "SibersPokedex"
 includeBuild("build-logic")
 
@@ -38,7 +43,6 @@ include(
 
     ":components:pokedex:root:api",
     ":components:pokedex:root:impl",
-
 
     ":components:core:ui",
     ":components:core:theme",

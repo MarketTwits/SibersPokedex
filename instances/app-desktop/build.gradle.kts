@@ -1,8 +1,11 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.compose.reload.ComposeHotRun
+import org.jetbrains.kotlin.compose.compiler.gradle.ComposeFeatureFlag
 
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
+    id("org.jetbrains.compose.hot-reload")
     id("org.jetbrains.kotlin.plugin.compose")
 
 }
@@ -54,4 +57,12 @@ compose.desktop {
             version.set("7.5.0")
         }
     }
+}
+
+composeCompiler {
+    featureFlags.add(ComposeFeatureFlag.OptimizeNonSkippingGroups)
+}
+
+tasks.withType<ComposeHotRun>().configureEach {
+    mainClass.set("com.markettwits.siberspokedex.app.desktop.MainKt")
 }
